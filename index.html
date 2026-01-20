@@ -1,23 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremiah Oche | Frontend Developer</title>
+    <title>Josiah Jeremiah Oche | Frontend Developer & Digital Marketer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #f59e0b;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --success: #10b981;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        
+        /* CSS Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -25,1368 +14,917 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --gray: #7f8c8d;
+            --light-gray: #f5f7fa;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        html {
             scroll-behavior: smooth;
         }
         
+        body {
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--dark), #0f172a);
-            color: white;
-            padding: 2rem 0;
-            position: relative;
-            overflow: hidden;
+        section {
+            padding: 80px 0;
         }
         
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.4;
-        }
-        
-        .header-content {
-            position: relative;get
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50px; /* Remove circular shape */
-    object-fit: contain; /* Show full image (no cropping) */
-    border: 4px solid var(--secondary);
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-}
-        
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.4);
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: var(--primary);
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, white, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.8rem;
         }
         
-        .tagline {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
             color: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 5px;
             font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            background: linear-gradient(135deg, var(--light) 0%, #d6dbdf 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         
         .contact-info {
             display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-2px);
+            background: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
         }
         
         .contact-item i {
+            margin-right: 10px;
             color: var(--secondary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            color: white;
-            text-decoration: none;
-        }
-        
-        .social-link:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px) scale(1.1);
         }
         
         /* Section Styles */
-        section {
-            padding: 4rem 0;
-        }
-        
         .section-title {
+            margin-bottom: 40px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+        }
+        
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            box-shadow: var(--shadow);
         }
         
-        .section-title h2 {
+        .stat-number {
             font-size: 2rem;
-            display: inline-block;
-            position: relative;
-            padding-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--secondary);
         }
         
-        .section-title h2::after {
-            content: "";
+        /* Experience Section */
+        .experience {
+            background: var(--light-gray);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
             position: absolute;
-            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-            border-radius: 2px;
-        }
-        
-        /* Superpowers Section */
-        .superpowers {
-            background-color: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: var(--transition);
-        }
-        
-        .superpowers:hover {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .powers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .power-card {
-            background-color: var(--light);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            transition: var(--transition);
-            border-left: 4px solid var(--primary);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .power-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            width: 2px;
             height: 100%;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent);
-            z-index: 0;
+            background: var(--secondary);
         }
         
-        .power-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .power-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .timeline-item {
+            margin-bottom: 50px;
             position: relative;
-            z-index: 1;
+            width: 45%;
         }
         
-        .power-card p {
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
             position: relative;
-            z-index: 1;
         }
         
-        /* Highlights Section */
-        .highlights {
-            background-color: var(--primary);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .highlights::before {
-            content: "";
+        .timeline-content:before {
+            content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
         }
         
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -10px;
         }
         
-        .highlight-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            position: relative;
-            z-index: 2;
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -10px;
         }
         
-        .highlight-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            text-align: center;
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
         }
         
-        .highlight-card:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        .timeline-item:nth-child(odd) .timeline-dot {
+            left: calc(45% + 1px);
         }
         
-        .highlight-card .number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: calc(55% - 1px);
         }
         
-        /* Expertise Section */
-        .expertise-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .expertise-tab {
-            padding: 0.5rem 1.5rem;
-            background-color: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 2rem;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-        
-        .expertise-tab:hover {
-            transform: translateY(-2px);
-        }
-        
-        .expertise-tab.active {
-            background-color: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
-        }
-        
-        .expertise-content {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .expertise-content.active {
-            display: block;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .skill-item {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-        
-        .skill-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-item i {
+        .job-title {
+            font-weight: 600;
             color: var(--primary);
             font-size: 1.2rem;
         }
         
+        .company {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            background: var(--light);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .dev-tag {
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .marketing-tag {
+            border-left: 4px solid var(--accent);
+        }
+        
+        .tools-tag {
+            border-left: 4px solid #2ecc71;
+        }
+        
         /* Projects Section */
+        .projects {
+            background: var(--light-gray);
+        }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 30px;
         }
         
         .project-card {
-            background-color: white;
-            border-radius: 0.5rem;
+            background: white;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .project-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.1), transparent);
-            opacity: 0;
-            transition: var(--transition);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
         }
         
-        .project-card:hover::before {
-            opacity: 1;
-        }
-        
-        .project-image {
+        .project-img {
             height: 200px;
-            background-color: #e2e8f0;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-image::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
-        }
-        
-        .project-details {
-            padding: 1.5rem;
-            position: relative;
-        }
-        
-        .project-details h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tech-tag {
-            background-color: #e2e8f0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .tech-tag:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .achievements p {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .project-link {
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .project-link.primary {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .project-link.primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
-        }
-        
-        .project-link.secondary {
-            border: 1px solid var(--primary);
-            color: var(--primary);
-        }
-        
-        .project-link.secondary:hover {
-            background-color: rgba(37, 99, 235, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        /* Community Section */
-        .community-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .community-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .community-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .community-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(37, 99, 235, 0.1);
-            border-radius: 50%;
+            background: var(--secondary);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-        
-        .community-card:hover .community-icon {
-            background-color: var(--primary);
             color: white;
-            transform: rotate(10deg) scale(1.1);
+            font-size: 3rem;
         }
         
-        /* Differentiators Section */
-        .diff-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .project-content {
+            padding: 25px;
         }
         
-        .diff-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            border-top: 4px solid var(--secondary);
-        }
-        
-        .diff-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .diff-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        /* Testimonial Section */
-        .testimonial {
-            background-color: var(--primary);
-            color: white;
-            padding: 3rem;
-            border-radius: 0.5rem;
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        .testimonial::before {
-    content: ""; /* Fix: Use proper empty content syntax */
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 4rem;
-    color: rgba(255, 255, 255, 0.1);
-    font-family: Georgia, serif;
-    z-index: 1;
-}
-        
-        .testimonial::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            z-index: 1;
-        }
-        
-        .testimonial-content {
-            position: relative;
-            z-index: 2;
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Fun Fact Section */
-        .fun-fact {
-            text-align: center;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .fun-fact::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.05), transparent);
-            z-index: 0;
-        }
-        
-        .fun-fact:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .fun-fact h3 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .fun-fact p {
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Learning Section */
-        .learning-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-        }
-        
-        .learning-tag {
-            background-color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-        
-        .learning-tag:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .learning-tag i {
-            color: var(--success);
+        .project-content h3 {
+            margin-bottom: 10px;
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark);
+            background: var(--dark);
             color: white;
-            padding: 2rem 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        footer::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.1;
+            padding: 50px 0 20px;
         }
         
         .footer-content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
+            justify-content: space-between;
             flex-wrap: wrap;
-            justify-content: center;
+            margin-bottom: 40px;
         }
         
-        .footer-link {
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
             color: white;
-            text-decoration: none;
-            transition: var(--transition);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p {
+            color: #bdc3c7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
         }
         
-        .footer-link:hover {
-            color: var(--secondary);
-            transform: translateY(-2px);
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
         }
         
         .copyright {
-            color: var(--gray);
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
             font-size: 0.9rem;
         }
         
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            opacity: 0;
-            visibility: hidden;
-            z-index: 100;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
+        /* Responsive Styles */
+        @media (max-width: 992px) {
             h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
                 font-size: 2rem;
             }
             
-            .tagline {
-                font-size: 1.1rem;
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+            }
+            
+            .timeline-dot {
+                left: 21px !important;
+            }
+            
+            .timeline-content:before {
+                left: -10px !important;
+                right: auto !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: var(--primary);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+                box-shadow: var(--shadow);
+            }
+            
+            nav.active ul {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
             }
             
             .contact-info {
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: center;
             }
-            
+        }
+        
+        @media (max-width: 576px) {
             section {
-                padding: 2rem 0;
+                padding: 60px 0;
             }
             
-            .section-title h2 {
-                font-size: 1.5rem;
+            h1 {
+                font-size: 2rem;
             }
             
-            .testimonial {
-                padding: 2rem 1rem;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .back-to-top {
-                width: 40px;
-                height: 40px;
-                bottom: 1rem;
-                right: 1rem;
+            .highlight-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="image/pic.png" alt="Jeremiah Oche" class="profile-pic">
-                <h1>Jeremiah Josiah Oche</h1>
-                <p class="tagline">Frontend Developer Who Builds Blazing-Fast, Beautiful Web Experiences</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Abuja, Nigeria</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>jossyjerry4@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+2349030851771</span>
-                    </div>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#" class="social-link" title="Portfolio">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                    <a href="#" class="social-link" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="social-link" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+        <div class="container header-container">
+            <div class="logo">J<span>O</span></div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Technical Superpowers Section -->
-    <section id="superpowers">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <div class="section-title">
-                <h2>Technical Superpowers</h2>
+            <h1>Josiah Jeremiah Oche</h1>
+            <div class="hero-subtitle">Frontend Developer & Digital Marketer</div>
+            <p>Combining technical expertise in building responsive web applications with strategic skills in managing paid social media campaigns across multiple platforms.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Abuja, Nigeria</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>09030851771</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>jossyjerry@gmail.com</span>
+                </div>
             </div>
-            
-            <div class="superpowers">
-                <div class="powers-grid">
-                    <div class="power-card">
-                        <h3><i class="fas fa-rocket"></i> Performance Ninja</h3>
-                        <p>Consistently deliver 90+ Lighthouse scores through meticulous optimization techniques.</p>
+            <a href="#contact" class="btn" style="margin-top: 30px;">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Professional Summary</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A versatile Computer Engineering graduate from Oduduwa University specializing in Frontend Development and Digital Marketing. Combines technical expertise in building responsive web applications with strategic skills in managing paid social media campaigns across multiple platforms.</p>
+                    <p>Proven experience in both corporate and freelance environments, delivering measurable results through data-driven strategies.</p>
+                    
+                    <div class="highlight-stats">
+                        <div class="stat">
+                            <div class="stat-number">40%</div>
+                            <div>Average Engagement Increase</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">21+</div>
+                            <div>Websites Developed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5M+</div>
+                            <div>Monthly Ad Budget Managed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">25%</div>
+                            <div>Avg. Conversion Rate Improvement</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Education</h3>
+                    <div style="background: white; padding: 25px; border-radius: 5px; box-shadow: var(--shadow);">
+                        <h4>Bachelor of Engineering (B.Eng.) in Computer Engineering</h4>
+                        <p><strong>Oduduwa University</strong>, Ipetumodu, Osun State, Nigeria</p>
                     </div>
                     
-                    <div class="power-card">
-                        <h3><i class="fas fa-paint-brush"></i> UI Artisan</h3>
-                        <p>Pixel-perfect implementations from Figma designs with attention to every detail.</p>
+                    <h3 style="margin-top: 40px;">Core Competencies</h3>
+                    <ul style="background: white; padding: 25px; border-radius: 5px; box-shadow: var(--shadow);">
+                        <li><i class="fas fa-check" style="color: #2ecc71; margin-right: 10px;"></i> Responsive Web Development</li>
+                        <li><i class="fas fa-check" style="color: #2ecc71; margin-right: 10px;"></i> Social Media Campaign Management</li>
+                        <li><i class="fas fa-check" style="color: #2ecc71; margin-right: 10px;"></i> Performance Analytics & Optimization</li>
+                        <li><i class="fas fa-check" style="color: #2ecc71; margin-right: 10px;"></i> UI/UX Principles Implementation</li>
+                        <li><i class="fas fa-check" style="color: #2ecc71; margin-right: 10px;"></i> A/B Testing & Conversion Rate Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-dot"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">2020 – 2026</div>
+                        <div class="job-title">Freelance Frontend Developer & Digital Marketer</div>
+                        <div class="company">Self-Employed</div>
+                        <ul>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Developed and deployed 21+ responsive, mobile-first websites for SMEs</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Managed social media ad campaigns for clients in various industries</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Improved client engagement by average of 40% through targeted strategies</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Reduced client CPA by 15% through continuous campaign optimization</li>
+                        </ul>
                     </div>
-                    
-                    <div class="power-card">
-                        <h3><i class="fab fa-react"></i> React Specialist</h3>
-                        <p>Expert in Hooks, Context API, Redux Toolkit, and modern React patterns.</p>
+                </div>
+                
+                <div class="timeline-dot"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">2023 – 2025</div>
+                        <div class="job-title">Volunteer - Digital Coordinator</div>
+                        <div class="company">Peace Maker Global Foundation</div>
+                        <ul>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Managed the foundation's online presence across all social media platforms</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Created digital content for awareness campaigns reaching 50,000+ impressions</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Developed and maintained the organization's responsive website</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Trained 10+ staff members on digital tools and social media best practices</li>
+                        </ul>
                     </div>
-                    
-                    <div class="power-card">
-                        <h3><i class="fas fa-mobile-alt"></i> Mobile-First Magician</h3>
-                        <p>Flawless responsiveness across all devices with mobile-first approach.</p>
+                </div>
+                
+                <div class="timeline-dot"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">2022 – 2023</div>
+                        <div class="job-title">Digital Marketing Specialist</div>
+                        <div class="company">Paxful</div>
+                        <ul>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Managed paid advertising campaigns on social media platforms with monthly budgets exceeding 5M</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Optimized conversion funnels and landing pages, improving conversion rate by 25%</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Analyzed campaign performance using Google Analytics and Meta Business Suite</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Collaborated with development team on UX improvements that reduced bounce rate by 15%</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-dot"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">2021 – 2022</div>
+                        <div class="job-title">Media Manager & IT Support</div>
+                        <div class="company">New Horizon</div>
+                        <ul>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Managed social media campaigns across multiple platforms (Facebook, Instagram, TikTok)</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Provided technical support for digital infrastructure and IT systems</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Developed and implemented digital marketing strategies that increased brand visibility by 40%</li>
+                            <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--secondary); margin-right: 10px;"></i> Created engaging content for brand awareness and audience growth</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Highlights Section -->
-    <section class="highlights" id="highlights">
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <div class="section-title">
-                <h2>Career Highlights</h2>
-            </div>
-            
-            <div class="highlight-cards">
-                <div class="highlight-card">
-                    <div class="number">40%</div>
-                    <p>Faster load times for NGO donor portal through advanced optimization</p>
+            <h2>Technical & Marketing Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag dev-tag">HTML5</div>
+                        <div class="skill-tag dev-tag">CSS3</div>
+                        <div class="skill-tag dev-tag">JavaScript</div>
+                        <div class="skill-tag dev-tag">React.js</div>
+                        <div class="skill-tag dev-tag">Responsive Web Design</div>
+                        <div class="skill-tag dev-tag">Git/GitHub</div>
+                        <div class="skill-tag dev-tag">UI/UX Principles</div>
+                    </div>
                 </div>
                 
-                <div class="highlight-card">
-                    <div class="number">24+</div>
-                    <p>Developers trained in modern frontend techniques</p>
+                <div class="skill-category">
+                    <h3>Digital Marketing</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag marketing-tag">Social Media Advertising</div>
+                        <div class="skill-tag marketing-tag">Meta Ads</div>
+                        <div class="skill-tag marketing-tag">TikTok Ads</div>
+                        <div class="skill-tag marketing-tag">Instagram Ads</div>
+                        <div class="skill-tag marketing-tag">Campaign Strategy</div>
+                        <div class="skill-tag marketing-tag">A/B Testing</div>
+                        <div class="skill-tag marketing-tag">Audience Targeting</div>
+                        <div class="skill-tag marketing-tag">Google Analytics</div>
+                        <div class="skill-tag marketing-tag">Performance Optimization</div>
+                    </div>
                 </div>
                 
-                <div class="highlight-card">
-                    <div class="number">25%</div>
-                    <p>Boost in conversions through UX improvements</p>
-                </div>
-                
-                <div class="highlight-card">
-                    <div class="number">100%</div>
-                    <p>Client satisfaction across all freelance projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Expertise Section -->
-    <section id="expertise">
-        <div class="container">
-            <div class="section-title">
-                <h2>Deep Dive: Technical Expertise</h2>
-            </div>
-            
-            <div class="expertise-tabs">
-                <div class="expertise-tab active" data-tab="frontend">Frontend Mastery</div>
-                <div class="expertise-tab" data-tab="performance">Performance Optimization</div>
-                <div class="expertise-tab" data-tab="emerging">Emerging Tech</div>
-            </div>
-            
-            <div class="expertise-content active" id="frontend-tab">
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React Ecosystem: Next.js, Gatsby, Remix</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-cogs"></i>
-                        <span>State Management: Redux, Zustand, Jotai</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-film"></i>
-                        <span>Animation: Framer Motion, GSAP</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-vial"></i>
-                        <span>Testing: Jest, React Testing Library, Cypress</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js"></i>
-                        <span>JavaScript ES6+</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-code"></i>
-                        <span>TypeScript</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expertise-content" id="performance-tab">
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fas fa-code-branch"></i>
-                        <span>Code splitting & lazy loading</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-image"></i>
-                        <span>Image optimization (WebP, AVIF)</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-weight-hanging"></i>
-                        <span>Bundle analysis & size reduction</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-network-wired"></i>
-                        <span>CDN implementation experience</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>Lighthouse optimization</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-memory"></i>
-                        <span>Memory management</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="expertise-content" id="emerging-tab">
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fas fa-cube"></i>
-                        <span>Web Components</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-microchip"></i>
-                        <span>WebAssembly (WASM) basics</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Progressive Web Apps (PWAs)</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-server"></i>
-                        <span>Edge Computing</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Serverless Functions</span>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag tools-tag">VS Code</div>
+                        <div class="skill-tag tools-tag">Figma</div>
+                        <div class="skill-tag tools-tag">Meta Business Suite</div>
+                        <div class="skill-tag tools-tag">Google Ads</div>
+                        <div class="skill-tag tools-tag">Canva</div>
+                        <div class="skill-tag tools-tag">Chrome DevTools</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Showcase Section -->
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Project Showcase</h2>
-            </div>
-            
+            <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1725618878496-233974f2fd59?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
-                    <div class="project-details">
-                        <h3>PeaceMaker Global Foundation Portal</h3>
-                        <p>Lead Frontend Developer for NGO portal with exceptional performance metrics.</p>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">TailwindCSS</span>
-                            <span class="tech-tag">GraphQL</span>
-                        </div>
-                        
-                        <div class="achievements">
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> 92 Lighthouse performance score</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> 35% faster navigation with route prefetching</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> ADA-compliant accessibility</p>
-                        </div>
-                        
-                        <div class="project-links">
-    
-                                                    </div>
+                    <div class="project-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Dashboard</h3>
+                        <p>Built with React.js, integrated Facebook Pixel for conversion tracking. Implemented real-time analytics and inventory management features.</p>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1673977133884-4ed4189ca8e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D')"></div>
-                    <div class="project-details">
-                        <h3>E-Commerce Accelerator</h3>
-                        <p>Solo developer for high-performance e-commerce solution with Stripe integration.</p>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Stripe</span>
-                            <span class="tech-tag">Framer Motion</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        
-                        <div class="achievements">
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> 0.5s average page load time</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> 40% reduction in cart abandonment</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> Featured on "Awesome Web Dev" newsletter</p>
-                        </div>
-                        
-                        <div class="project-links">
-                            
-                        </div>
+                    <div class="project-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Campaign Analytics Platform</h3>
+                        <p>Developed interactive data visualization for multi-platform campaigns. Provided insights for optimizing ad spend across Facebook, Instagram, and TikTok.</p>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1544813813-2c73bec209ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c29tZSUyMG9uZSUyMHRlYWNoaW5nJTIwRGV2ZWxvcGVyJTIwTGVhcm5pbmclMjBuaWdlcmlhfGVufDB8fDB8fHww')"></div>
-                    <div class="project-details">
-                        <h3>Developer Learning Platform</h3>
-                        <p>Interactive coding platform with real-time collaboration features.</p>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">Python</span>
-            
-                            <span class="tech-tag">Css</span>
-                        </div>
-                        
-                        <div class="achievements">
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> Real-time code collaboration</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> 60+ interactive coding exercises</p>
-                            <p><i class="fas fa-check-circle" style="color: var(--success)"></i> Used by 50+ developers</p>
-                        </div>
-                        
-                        <div class="project-links">
-                            
-                        </div>
+                    <div class="project-img">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>NGO Website Redesign</h3>
+                        <p>Redesigned Peace Maker Global Foundation website, improving engagement by 60%. Implemented donation system and volunteer registration portal.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-window-restore"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Responsive Landing Page</h3>
+                        <p>Created high-converting landing page with 25% conversion rate improvement. Implemented A/B testing for optimizing call-to-action placements.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Open Source & Community Section -->
-    <section id="community">
-        <div class="container">
-            <div class="section-title">
-                <h2>Open Source & Community</h2>
-            </div>
-            
-            <div class="community-items">
-                <div class="community-card">
-                    <div class="community-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Hacktoberfest Contributor</h3>
-                    <p>Active contributor in 2022 and 2023 editions</p>
-                    <p class="small-text">Contributed to 8+ open source projects</p>
-                </div>
-                
-                <div class="community-card">
-                    <div class="community-icon">
-                        <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h3>Tech Blogger</h3>
-                    <p>Wrote "10 React Performance Tricks" with 500+ reads</p>
-                    <p class="small-text">Published 15+ technical articles</p>
-                </div>
-                
-                <div class="community-card">
-                    <div class="community-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <h3>Conference Speaker</h3>
-                    <p>Spoke at NigeriaJS 2023 about performance optimization</p>
-                    <p class="small-text">200+ attendees</p>
-                </div>
-                
-                <div class="community-card">
-                    <div class="community-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Mentor</h3>
-                    <p>Mentored 12 junior developers in 2023</p>
-                    <p class="small-text">Helped 5 land their first tech jobs</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <div class="section-title">
-                <h2>Certifications</h2>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-certificate" style="color: var(--secondary)"></i>
-                    <span>Advanced React - Frontend Masters</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-certificate" style="color: var(--secondary)"></i>
-                    <span>Web Performance - Udacity</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-certificate" style="color: var(--secondary)"></i>
-                    <span>Accessibility Fundamentals - Deque University</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-certificate" style="color: var(--secondary)"></i>
-                    <span>TypeScript Masterclass - Frontend Masters</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-certificate" style="color: var(--secondary)"></i>
-                    <span>Modern CSS - CSS-Tricks</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What Makes Me Different Section -->
-    <section id="differentiators">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Makes Me Different</h2>
-            </div>
-            
-            <div class="diff-grid">
-                <div class="diff-card">
-                    <h3><i class="fas fa-bridge"></i> Design-Dev Bridge</h3>
-                    <p>Fluent in Figma ↔ Code handoffs, ensuring design integrity in implementation.</p>
-                    <p class="small-text">Reduced design-system implementation time by 30%</p>
-                </div>
-                
-                <div class="diff-card">
-                    <h3><i class="fas fa-tachometer-alt"></i> Performance Obsession</h3>
-                    <p>Every KB matters in my builds, with meticulous attention to optimization.</p>
-                    <p class="small-text">Average 90+ Lighthouse scores across projects</p>
-                </div>
-                
-                <div class="diff-card">
-                    <h3><i class="fas fa-lightbulb"></i> Future-Proof Skills</h3>
-                    <p>Always learning and staying ahead of the curve (currently mastering Svelte).</p>
-                    <p class="small-text">Dedicate 10+ hours weekly to learning</p>
-                </div>
-                
-                <div class="diff-card">
-                    <h3><i class="fas fa-chart-line"></i> Business Impact Mindset</h3>
-                    <p>Code that drives real metrics and business outcomes, not just features.</p>
-                    <p class="small-text">Projects average 25% conversion improvements</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section id="testimonial">
-        <div class="container">
-            <div class="testimonial">
-                <p class="testimonial-content">"Jeremiah transformed our web presence. His attention to performance and detail is unmatched. He delivered our project 2 weeks ahead of schedule while exceeding all performance benchmarks."</p>
-                <p class="testimonial-author">- Peace Maker Global Foundation CTO</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fun Fact Section -->
-    <section id="fun-fact">
-        <div class="container">
-            <div class="fun-fact">
-                <h3>Fun Fact</h3>
-                <p>Built a WebGL-powered portfolio that got me 3 job offers in 2 weeks</p>
-                <p class="small-text">Featured on Codrops and CSS-Tricks</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Currently Learning Section -->
-    <section id="learning">
-        <div class="container">
-            <div class="section-title">
-                <h2>Currently Learning</h2>
-            </div>
-            
-            <div class="learning-tags">
-                <div class="learning-tag">
-                    <i class="fas fa-brain"></i>
-                    <span>React Server Components</span>
-                </div>
-                <div class="learning-tag">
-                    <i class="fas fa-leaf"></i>
-                    <span>Deno Fresh framework</span>
-                </div>
-                <div class="learning-tag">
-                    <i class="fab fa-ethereum"></i>
-                    <span>Web3 frontend development</span>
-                </div>
-                <div class="learning-tag">
-                    <i class="fas fa-robot"></i>
-                    <span>AI integration in frontend</span>
-                </div>
-                <div class="learning-tag">
-                    <i class="fas fa-bolt"></i>
-                    <span>Edge computing</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Contact Section -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <h3>Let's Build Something Amazing Together</h3>
-                
-                <div class="footer-links">
-                    <a href="mailto:jossyjerry4@gmail.com" class="footer-link">
-                        <i class="fas fa-envelope"></i> Email Me
-                    </a>
-                    <a href="#" class="footer-link">
-                        <i class="fab fa-linkedin-in"></i> LinkedIn
-                    </a>
-                    <a href="#" class="https://github.com/jossyjerry/portfolio">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="tel:+2349030851771" class="footer-link">
-                        <i class="fas fa-phone"></i> Call Me
-                    </a>
-                    <a href="#" class="footer-link">
-                        <i class="fab fa-twitter"></i> Twitter
-                    </a>
+                <div class="footer-section">
+                    <h3>Josiah Jeremiah Oche</h3>
+                    <p>Frontend Developer & Digital Marketer with a proven track record of delivering measurable results through data-driven strategies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
-                <p class="copyright">© 2023 Jeremiah Josiah Oche. All rights reserved.</p>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Abuja, Nigeria</p>
+                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> 09030851771</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> jossyjerry@gmail.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#experience">Experience</a></p>
+                    <p><a href="#skills">Skills</a></p>
+                    <p><a href="#projects">Projects</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Josiah Jeremiah Oche. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tab functionality
-            const tabs = document.querySelectorAll('.expertise-tab');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    document.querySelectorAll('.expertise-tab').forEach(t => t.classList.remove('active'));
-                    
-                    // Add active class to clicked tab
-                    this.classList.add('active');
-                    
-                    // Hide all content
-                    document.querySelectorAll('.expertise-content').forEach(c => c.classList.remove('active'));
-                    
-                    // Show corresponding content
-                    const tabId = this.getAttribute('data-tab');
-                    document.getElementById(`${tabId}-tab`).classList.add('active');
-                });
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
             });
-            
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
-            
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Animation on scroll
-            const animateOnScroll = function() {
-                const elements = document.querySelectorAll('.power-card, .highlight-card, .project-card, .community-card, .diff-card');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementPosition < windowHeight - 100) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            };
-            
-            // Initialize elements with opacity 0 and slightly translated
-            document.querySelectorAll('.power-card, .highlight-card, .project-card, .community-card, .diff-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            });
-            
-            window.addEventListener('scroll', animateOnScroll);
-            window.addEventListener('load', animateOnScroll);
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--primary)';
+            }
         });
     </script>
 </body>
